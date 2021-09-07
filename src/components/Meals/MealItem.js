@@ -15,14 +15,16 @@ const MealItem = (props) => {
         })
     }
     //console.log(props.items.name);
-    return <Card>
+    return (
+      <Card>
         <div>
-            <h1>{props.name}</h1>
-            <p>{props.description}</p>
-            <h5 className={classes.price}>{price}</h5>
+          <h1>{props.name}</h1>
+          <p className={classes.description}>{props.description}</p>
+          <h5 className={classes.price}>{price}</h5>
         </div>
-        <MealItemForm onAddToCart={addToCartHandler} id={props.id}/>
-    </Card>
+        <MealItemForm onAddToCart={addToCartHandler} id={props.id} />
+      </Card>
+    );
 
 }
 

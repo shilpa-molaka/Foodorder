@@ -1,10 +1,11 @@
-import classes from './CartItem.module.css';
-
+import classes from "./CartItem.module.css";
+import Card from "../UI/Card";
 const CartItem = (props) => {
   const price = `$${props.price.toFixed(2)}`;
-  console.log(price);
+
   return (
-    <li className={classes['cart-item']}>
+    <Card>
+    <li className={classes["cart-item"]}>
       <div>
         <h2>{props.name}</h2>
         <div className={classes.summary}>
@@ -17,6 +18,7 @@ const CartItem = (props) => {
         <button onClick={props.onAdd}>+</button>
       </div>
     </li>
+    </Card>
   );
 };
 
